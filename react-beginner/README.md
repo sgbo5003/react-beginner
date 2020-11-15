@@ -9,6 +9,17 @@ Learning React and Es6 by building a Movie Discovery App.
 - [ ] Search
 - [ ] Detail
 
+## API Verbs
+
+- [x] Now playing (TV, Movie)
+- [x] Upcoming (Movie)
+- [x] Top Rated (TV)
+- [x] Popular (TV, X)
+- [x] Airing Today (TV)
+- [x] TV Show Detail
+- [x] Movie Detail
+- [x] Search (Movie, TV)
+
 <br>
 
 # 11/14 일자 공부내용
@@ -186,3 +197,102 @@ export default App;
 react에서 styled-components 를 할 때 style 자동완성이 안되서 불편했다.
 
 해결방법 : extension에서 **vscode-styled-components Extension** 설치
+
+# 11/15 일자 공부내용
+
+## 3-4 Location Aware Header
+
+SC(styled-components)에서는 SC에 props를 줄 수 있다.
+
+```
+ border-bottom: 5px solid
+    ${(props) => (props.current ? "#3498db" : "transparent")};
+```
+
+### **withRouter**
+
+**withRouter** : 다른 컴포넌트를 감싸는 컴포넌트, Router에 어떠한 정보를 준다.
+
+어떤 컴포넌트와도 **연결**할 수 있다.
+
+withRouter는 주로 **history에 접근**하여 컴포넌트에서 라우터를 **조작**하는 데 사용
+
+라우트가 아닌 컴포넌트에서 라우터에서 사용하는 객체 - **location, match, history 를 사용하려면**, withRouter를 사용해야 한다.
+
+withRouter 고차원 컴포넌트를 통해 history 객체의 속성과 가장 가까운 match 액세스 할 수 있다.
+
+withRouter는 render props : { match, location, history } 와 같은 props로써 경로가 변경 될 때마다 해당 구성 요소를 다시 렌더링한다.
+
+## 4-0 Networking Introduction to The Movie DB API
+
+movie app API KEY
+
+10923b261ba94d897ac6b81148314a3f
+
+## 4-1 Sexy Networking with Axios Instances
+
+axios를 이용
+
+## 4-2 API Verbs part One
+
+가져올 API들 정리
+
+```
+export const moviesApi = {
+  nowPlaying: () => api.get("movie/now_playing"),
+  upcoming: () => api.get("movie/upcoming"),
+  popular: () => api.get("movie/popular"),
+};
+export const tvApi = {
+  topRated: () => api.get("tv/top_rated"),
+  popular: () => api.get("tv/popular"),
+  airingToday: () => api.get("tv/airing_today"),
+};
+```
+
+## 4-3 API Verbs part Two
+
+```
+import axios from "axios";
+const api = axios.create({
+  baseURL: "https://api.themoviedb.org/3/",
+  params: {
+    api_key: "10923b261ba94d897ac6b81148314a3f",
+    language: "en-US",
+  },
+});
+export const moviesApi = {
+  nowPlaying: () => api.get("movie/now_playing"),
+  upcoming: () => api.get("movie/upcoming"),
+  popular: () => api.get("movie/popular"),
+  movieDetail: (id) =>
+    api.get(`movie/${id}`, {
+      params: {
+        append_to_response: "videos",
+      },
+    }),
+  search: (term) =>
+    api.get("search/movie", {
+      params: {
+        query: encodeURIComponent(term),
+      },
+    }),
+};
+export const tvApi = {
+  topRated: () => api.get("tv/top_rated"),
+  popular: () => api.get("tv/popular"),
+  airingToday: () => api.get("tv/airing_today"),
+  showDetail: (id) =>
+    api.get(`tv/${id}`, {
+      params: {
+        append_to_response: "videos",
+      },
+    }),
+  search: (term) =>
+    api.get("search/tv", {
+      params: {
+        query: encodeURIComponent(term),
+      },
+    }),
+};
+```
