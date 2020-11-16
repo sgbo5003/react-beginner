@@ -296,3 +296,37 @@ export const tvApi = {
     }),
 };
 ```
+
+# 11/16일 공부내용
+
+## 5-0 Container Presenter Pattern part One
+
+리액트는 Component 단위로 개발한다.
+근데 그거 말고는 딱히 정해진 양식이 없다.
+이벤트 제어도 자유 (권장하는 방식이 있긴 있음) css 스타일링도 자유다.
+
+**Container Presenter Pattern(리엑트 컴포넌트 코딩 패턴)**
+
+데이터처리와 데이터출력을 분리 (logic 과 presenter를 분리)
+
+**Container** : API Request, Exception Error, setState... ETC...
+
+**Presenter** : only Props, UI, no logic
+
+이런 구조로 만드는 것이 Container + presenter 패턴
+
+**<핵심>**
+
+**Container** : 데이터 로직 처리~~~ 이것저것 해서 props로 넘긴다.
+
+**Presenter** : 그걸 props로 받아서 보여주기만 한다
+
+## 5-1 Container Presenter Pattern part Two
+
+각각 폴더에 Container.js, Presenter.js를 만들어 분리
+
+## 5-2 Home Container
+
+**async, await** : 내가 무언가를 끝낼 때 까지 기다리게 하고 싶을 때 사용
+
+**객체 비구조화 할당** 사용
