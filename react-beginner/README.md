@@ -330,3 +330,23 @@ export const tvApi = {
 **async, await** : 내가 무언가를 끝낼 때 까지 기다리게 하고 싶을 때 사용
 
 **객체 비구조화 할당** 사용
+
+# 11/17일 공부내용
+
+## 5-3 TV Container
+
+**async**라는 함수안에서만 **await**를 쓸 수 있다.
+
+## 5-4 Search Container
+
+## 5-5 Detail Container part One
+
+## 5-6 Detail Container part Two
+
+**includes()함수** : 문자열이 특정 문자열을 **포함**하는지 확인하는 메서드
+
+## 5-7 Destructuring assignment with let
+
+## 6-0 Presenter Structure
+
+Presenter들 구조화
