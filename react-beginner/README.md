@@ -350,3 +350,19 @@ export const tvApi = {
 ## 6-0 Presenter Structure
 
 Presenter들 구조화
+
+# 11/18일 공부내용   
+
+## 6-1 HomePresenter and Section Components
+
+Movie 화면에 Now Playing , upComing Movies, Popular Movies 띄우기, style 입히기
+
+## 6-2 TVPresenter and Loader Components
+
+**aria-label** : 시각장애인들을 위해
+
+```
+<span role="img" aria-label="Loading">
+      ..Loading
+    </span>
+```
