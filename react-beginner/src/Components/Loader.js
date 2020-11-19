@@ -12,8 +12,8 @@ const Container = styled.div`
 
 export default () => (
   <Container>
-    <span role="text" aria-label="Loading">
-      ..Loading
+    <span role="img" aria-label="Loading">
+      ⏰
     </span>
   </Container>
 );

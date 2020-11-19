@@ -366,3 +366,31 @@ Movie 화면에 Now Playing , upComing Movies, Popular Movies 띄우기, style �
       ..Loading
     </span>
 ```
+
+# 11/19일 공부내용
+
+## 6-3 SearchPresenter Component
+
+**all : unset**
+기본 스타일을 한번에 **초기화** 해준다.
+
+```
+ all: unset;
+```
+
+## 6-4 Message Component
+
+Message.js Coding
+
+## 6-5 Poster Component part One
+
+Poster.js Coding
+
+## 6-6 Rendering Poster Component
+
+**substring(0, ~)**
+: ~까지 문자열을 잘라준다.
+
+## 6-7 Poster Component part Two
+
+Poster Component Styling
