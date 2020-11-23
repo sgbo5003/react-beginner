@@ -394,3 +394,33 @@ Poster.js Coding
 ## 6-7 Poster Component part Two
 
 Poster Component Styling
+
+# 11/23일 공부내용
+
+## 6-8 Detail Container part One
+
+Detail 페이지 배경사진, 포스터 사진 styling, coding
+
+## 6-9 Detail Container part Two
+
+Detail 페이지 제목, 연도, 상영시간, 장르, 상세내용 styling, coding
+
+**span**은 **margin**을 가지지 않는다.
+
+## 6-10 React Helmet
+
+**react-helmet 설치**
+
+> npm add react-helmet
+
+**react-helmet**
+
+웹 문서의 **헤더 값을 변경**할 때 사용하는 **리액트 컴포넌트**이다
+
+react-helmet을 사용해 title 바꾸기 각 화면마다 title 다르게 보이게 하기
+
+**Fragments** (<>)
+리액트에서는 하나의 컴포넌트가 여러 개의 엘리먼트들을 반환한다.
+리액트를 사용하기 위한 문법인 JSX 를 쓸 때, return 문 안에는 반드시 **하나**의 최상위 태그가 있어야 한다. 이는 리액트가 **하나**의 컴포넌트만을 리턴할 수 있기 때문이다.
+
+하지만, **Fragments**는 DOM에 별도의 노드를 추가하지 않고 **여러 자식**을 **그룹화** 할 수 있다.
