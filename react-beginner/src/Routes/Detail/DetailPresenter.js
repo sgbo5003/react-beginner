@@ -58,7 +58,11 @@ const ItemContainer = styled.div`
   margin: 20px 0;
 `;
 
-const Item = styled.span``;
+const Item = styled.span`
+  a {
+    font-size: 15px;
+  }
+`;
 
 const Divider = styled.span`
   margin: 0 10px;
@@ -124,6 +128,15 @@ const DetailPresenter = ({ result, loading, error }) =>
                     ? genre.name
                     : `${genre.name} / `
                 )}
+            </Item>
+            <Divider>▪</Divider>
+            <Item>
+              <a href={`https://www.imdb.com/title/${result.imdb_id}`}>🎬</a>
+            </Item>
+            <Divider>▪</Divider>
+            <Item>
+              {result.production_countries &&
+                result.production_countries.map((name) => name.name)}
             </Item>
           </ItemContainer>
           <Overview>{result.overview}</Overview>
