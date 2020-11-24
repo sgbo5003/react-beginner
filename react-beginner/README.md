@@ -198,6 +198,8 @@ react에서 styled-components 를 할 때 style 자동완성이 안되서 불편
 
 해결방법 : extension에서 **vscode-styled-components Extension** 설치
 
+<br>
+
 # 11/15 일자 공부내용
 
 ## 3-4 Location Aware Header
@@ -297,6 +299,8 @@ export const tvApi = {
 };
 ```
 
+<br>
+
 # 11/16일 공부내용
 
 ## 5-0 Container Presenter Pattern part One
@@ -331,6 +335,8 @@ export const tvApi = {
 
 **객체 비구조화 할당** 사용
 
+<br>
+
 # 11/17일 공부내용
 
 ## 5-3 TV Container
@@ -351,6 +357,8 @@ export const tvApi = {
 
 Presenter들 구조화
 
+<br>
+
 # 11/18일 공부내용   
 
 ## 6-1 HomePresenter and Section Components
@@ -366,6 +374,8 @@ Movie 화면에 Now Playing , upComing Movies, Popular Movies 띄우기, style �
       ..Loading
     </span>
 ```
+
+<br>
 
 # 11/19일 공부내용
 
@@ -394,6 +404,8 @@ Poster.js Coding
 ## 6-7 Poster Component part Two
 
 Poster Component Styling
+
+<br>
 
 # 11/23일 공부내용
 
@@ -424,3 +436,25 @@ react-helmet을 사용해 title 바꾸기 각 화면마다 title 다르게 보�
 리액트를 사용하기 위한 문법인 JSX 를 쓸 때, return 문 안에는 반드시 **하나**의 최상위 태그가 있어야 한다. 이는 리액트가 **하나**의 컴포넌트만을 리턴할 수 있기 때문이다.
 
 하지만, **Fragments**는 DOM에 별도의 노드를 추가하지 않고 **여러 자식**을 **그룹화** 할 수 있다.
+
+<br>
+
+# 11/24일 공부내용
+
+## 6-11 Code Challenges
+
+detail 페이지에서 나 스스로 몇 가지를 더 추가
+
+추가한 것 : 링크를 만들어 클릭하면 영화를 볼 수 있는 사이트로 이동( imdb 사이트, 바로 그 영화가 뜨게 했다) , 제작한 나라 표시
+
+## 7-0 Deploy to Github Pages
+
+**깃헙 페이지 생성**
+
+> https://sgbo5003.github.io/react-beginner
+
+안될때는 주소 뒤에 /#
+
+## 7-1 Deploying to Netlify
+
+Github Pages 이랑 비슷한 Netlify가 있다. (github와 연동)
